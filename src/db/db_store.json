@@ -1,0 +1,938 @@
+{
+  "users": [
+    {
+      "id": "u-1",
+      "email": "mohinextfuture@gmail.com",
+      "passwordHash": "$2b$10$Unq8bLg20pM5Vq2.XoDPeuN9QpT8G8.Uv5kExn8f09RgeU6/G.79S",
+      "name": "Super Owner Admin",
+      "role": "Super Admin",
+      "companyId": "c-owner",
+      "status": "active",
+      "sortOrder": 1,
+      "createdAt": "2026-06-15T03:15:53.996Z",
+      "updatedAt": "2026-06-15T03:15:53.996Z"
+    },
+    {
+      "id": "u-2",
+      "email": "admin@eurosia.io",
+      "passwordHash": "$2b$10$Unq8bLg20pM5Vq2.XoDPeuN9QpT8G8.Uv5kExn8f09RgeU6/G.79S",
+      "name": "Eurosia Operations Master",
+      "role": "Super Admin",
+      "companyId": "c-owner",
+      "status": "active",
+      "sortOrder": 2,
+      "createdAt": "2026-06-15T03:15:53.996Z",
+      "updatedAt": "2026-06-15T03:15:53.996Z"
+    },
+    {
+      "id": "u-3",
+      "email": "chief@acmecorp.com",
+      "passwordHash": "$2b$10$Unq8bLg20pM5Vq2.XoDPeuN9QpT8G8.Uv5kExn8f09RgeU6/G.79S",
+      "name": "John Doe",
+      "role": "Company Admin",
+      "companyId": "c-1",
+      "status": "active",
+      "sortOrder": 3,
+      "createdAt": "2026-06-15T03:15:53.996Z",
+      "updatedAt": "2026-06-15T03:15:53.996Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": "r-superadmin",
+      "name": "Super Admin",
+      "permissions": [
+        "all"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "r-compadmin",
+      "name": "Company Admin",
+      "permissions": [
+        "read_all",
+        "write_all",
+        "billing",
+        "manage_users"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "r-manager",
+      "name": "Manager",
+      "permissions": [
+        "read_all",
+        "write_all",
+        "manage_users"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "r-accountant",
+      "name": "Accountant",
+      "permissions": [
+        "read_billing",
+        "edit_billing"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "r-sales",
+      "name": "Sales User",
+      "permissions": [
+        "sales_crud",
+        "view_items"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "r-support",
+      "name": "Support Agent",
+      "permissions": [
+        "support_ticket_write",
+        "support_ticket_read"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "r-staff",
+      "name": "Staff",
+      "permissions": [
+        "self_edit",
+        "limited_read"
+      ],
+      "status": "active"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "p-all",
+      "name": "All Permissions",
+      "key": "all",
+      "category": "System"
+    },
+    {
+      "id": "p-comp-read",
+      "name": "Read Company Info",
+      "key": "read_all",
+      "category": "Company"
+    },
+    {
+      "id": "p-comp-write",
+      "name": "Write Company Info",
+      "key": "write_all",
+      "category": "Company"
+    },
+    {
+      "id": "p-billing-view",
+      "name": "Read Billing & subscription",
+      "key": "read_billing",
+      "category": "Billing"
+    },
+    {
+      "id": "p-billing-edit",
+      "name": "Manage Billing & gateway",
+      "key": "edit_billing",
+      "category": "Billing"
+    },
+    {
+      "id": "p-user-manage",
+      "name": "Manage Tenant Users",
+      "key": "manage_users",
+      "category": "Users"
+    },
+    {
+      "id": "p-sales-write",
+      "name": "Create Sales & Invoices",
+      "key": "sales_crud",
+      "category": "Sales"
+    },
+    {
+      "id": "p-items-read",
+      "name": "View Store Inventory",
+      "key": "view_items",
+      "category": "Inventory"
+    }
+  ],
+  "companies": [
+    {
+      "id": "c-owner",
+      "name": "EUROSIA Ltd.",
+      "status": "active",
+      "logo": "/assets/eurosia_logo.png",
+      "domain": "eurosia.io",
+      "email": "info@eurosia.io",
+      "packageId": "p-enterprise",
+      "subscriptionStatus": "active",
+      "createdAt": "2026-06-15T03:15:53.996Z",
+      "updatedAt": "2026-06-15T03:15:53.996Z"
+    },
+    {
+      "id": "c-1",
+      "name": "Acme Corp Ltd.",
+      "status": "active",
+      "logo": "/assets/acme_logo.png",
+      "domain": "acmecorp.com",
+      "email": "billing@acmecorp.com",
+      "packageId": "p-business",
+      "subscriptionStatus": "active",
+      "createdAt": "2026-06-15T03:15:53.996Z",
+      "updatedAt": "2026-06-15T03:15:53.996Z"
+    }
+  ],
+  "licenses": [
+    {
+      "id": "lic-1",
+      "licenseKey": "EUR-ACME-8F2B-9871-X99",
+      "companyId": "c-1",
+      "maxUsers": 20,
+      "maxDevices": 5,
+      "status": "active",
+      "startDate": "2026-01-01T00:00:00.000Z",
+      "expiryDate": "2027-12-31T00:00:00.000Z",
+      "offlineAllowed": true,
+      "offlineGraceDays": 30,
+      "lastValidatedDate": "2026-06-15T03:15:53.996Z"
+    },
+    {
+      "id": "lic-owner",
+      "licenseKey": "EUR-OWNER-MASTER-KEY",
+      "companyId": "c-owner",
+      "maxUsers": 9999,
+      "maxDevices": 9999,
+      "status": "active",
+      "startDate": "2026-01-01T00:00:00.000Z",
+      "expiryDate": "2036-12-31T00:00:00.000Z",
+      "offlineAllowed": true,
+      "offlineGraceDays": 180,
+      "lastValidatedDate": "2026-06-15T03:15:53.996Z"
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev-1",
+      "fingerprint": "FINGERPRINT_WEB_PREVIEW_USER",
+      "name": "HQ Primary Terminal",
+      "platform": "MacOS Client",
+      "companyId": "c-1",
+      "userId": "u-3",
+      "status": "active",
+      "lastActiveAt": "2026-06-15T03:15:53.996Z"
+    },
+    {
+      "id": "dev-2",
+      "fingerprint": "FINGERPRINT_OWNER_TERMINAL",
+      "name": "Owner Control Rig",
+      "platform": "Linux/Electron",
+      "companyId": "c-owner",
+      "userId": "u-1",
+      "status": "active",
+      "lastActiveAt": "2026-06-15T03:15:53.996Z"
+    }
+  ],
+  "appModules": [
+    {
+      "id": "mod-pos",
+      "name": "EUROSIA POS",
+      "description": "Smart Restaurant & Retail Management",
+      "slug": "eurosia-pos",
+      "icon": "DollarSign",
+      "category": "management",
+      "rating": 4.8,
+      "fee": 39,
+      "status": "active",
+      "sortOrder": 1,
+      "externalUrl": "https://eurosia.io/",
+      "openInNewTab": true,
+      "isExternal": true
+    },
+    {
+      "id": "mod-care",
+      "name": "EUROSIA Care",
+      "description": "Digital Clinic & Healthcare Platform",
+      "slug": "eurosia-care",
+      "icon": "Activity",
+      "category": "industry",
+      "rating": 4.7,
+      "fee": 49,
+      "status": "active",
+      "sortOrder": 2,
+      "externalUrl": "https://care.eurosia.app",
+      "openInNewTab": true,
+      "isExternal": true
+    },
+    {
+      "id": "mod-pbx",
+      "name": "EUROSIA CloudPBX",
+      "description": "Cloud PBX & Call Center Solution",
+      "slug": "eurosia-cloudpbx",
+      "icon": "PhoneCall",
+      "category": "comms",
+      "rating": 4.9,
+      "fee": 29,
+      "status": "active",
+      "sortOrder": 3,
+      "externalUrl": "https://cloudpbx.eurosia.app",
+      "openInNewTab": true,
+      "isExternal": true
+    },
+    {
+      "id": "mod-ai-calling",
+      "name": "EUROSIA AI Calling",
+      "description": "AI-Powered Voice Automation Platform",
+      "slug": "eurosia-ai-calling",
+      "icon": "Mic",
+      "category": "ai",
+      "rating": 4.9,
+      "fee": 79,
+      "status": "active",
+      "sortOrder": 4,
+      "externalUrl": "https://aicalling.eurosia.app",
+      "openInNewTab": true,
+      "isExternal": true
+    },
+    {
+      "id": "mod-kabyo",
+      "name": "Kabyo Kotha AI",
+      "description": "Bengali Conversational AI Platform",
+      "slug": "kabyo-kotha-ai",
+      "icon": "MessageSquareText",
+      "category": "ai",
+      "rating": 4.6,
+      "fee": 19,
+      "status": "active",
+      "sortOrder": 5
+    },
+    {
+      "id": "mod-chatbot",
+      "name": "EUROSIA AI Chatbot",
+      "description": "Customer Engagement Platform",
+      "slug": "eurosia-ai-chatbot",
+      "icon": "Bot",
+      "category": "ai",
+      "rating": 4.8,
+      "fee": 25,
+      "status": "active",
+      "sortOrder": 6
+    },
+    {
+      "id": "mod-datapilot",
+      "name": "EUROSIA DataPilot AI",
+      "description": "Data Automation & Web Intelligence",
+      "slug": "eurosia-datapilot-ai",
+      "icon": "Database",
+      "category": "ai",
+      "rating": 4.7,
+      "fee": 89,
+      "status": "active",
+      "sortOrder": 7
+    },
+    {
+      "id": "mod-defender",
+      "name": "EUROSIA Defender X",
+      "description": "Global Cyber Defense Platform",
+      "slug": "eurosia-defender-x",
+      "icon": "ShieldAlert",
+      "category": "sec",
+      "rating": 4.9,
+      "fee": 99,
+      "status": "active",
+      "sortOrder": 8,
+      "externalUrl": "https://defenderx.eurosia.app",
+      "openInNewTab": true,
+      "isExternal": true
+    },
+    {
+      "id": "mod-buildnex",
+      "name": "EUROSIA BuildNex",
+      "description": "Construction ERP & Property Management",
+      "slug": "eurosia-buildnex",
+      "icon": "Building2",
+      "category": "industry",
+      "rating": 4.5,
+      "fee": 119,
+      "status": "active",
+      "sortOrder": 9
+    },
+    {
+      "id": "mod-cashbook",
+      "name": "EUROSIA CashBook",
+      "description": "Smart Business Accounting Software",
+      "slug": "eurosia-cashbook",
+      "icon": "BookOpen",
+      "category": "fintech",
+      "rating": 4.8,
+      "fee": 15,
+      "status": "active",
+      "sortOrder": 10
+    },
+    {
+      "id": "mod-invoicenex",
+      "name": "EUROSIA InvoiceNex",
+      "description": "Professional Invoice Generator",
+      "slug": "eurosia-invoicenex",
+      "icon": "Receipt",
+      "category": "fintech",
+      "rating": 4.9,
+      "fee": 9,
+      "status": "active",
+      "sortOrder": 11
+    },
+    {
+      "id": "mod-paybill",
+      "name": "EUROSIA PayBill",
+      "description": "Bill Management & Payment Reminder",
+      "slug": "eurosia-paybill",
+      "icon": "Hourglass",
+      "category": "fintech",
+      "rating": 4.7,
+      "fee": 12,
+      "status": "active",
+      "sortOrder": 12
+    },
+    {
+      "id": "mod-nexfarmer",
+      "name": "NexFarmer",
+      "description": "Agro Invoice & Farm Business Solution",
+      "slug": "nexfarmer",
+      "icon": "Wheat",
+      "category": "industry",
+      "rating": 4.8,
+      "fee": 29,
+      "status": "active",
+      "sortOrder": 13
+    },
+    {
+      "id": "mod-cloud",
+      "name": "EUROSIA Cloud",
+      "description": "Multi-Tenant SaaS Platform",
+      "slug": "eurosia-cloud",
+      "icon": "Cloud",
+      "category": "management",
+      "rating": 4.9,
+      "fee": 59,
+      "status": "active",
+      "sortOrder": 14
+    },
+    {
+      "id": "mod-fieldforce",
+      "name": "Field Force Tracker",
+      "description": "GPS & Workforce Management",
+      "slug": "field-force-tracker",
+      "icon": "MapPin",
+      "category": "management",
+      "rating": 4.6,
+      "fee": 24,
+      "status": "active",
+      "sortOrder": 15
+    },
+    {
+      "id": "mod-ecommerce",
+      "name": "EUROSIA eCommerce Source",
+      "description": "Multi-Vendor eCommerce Platform",
+      "slug": "eurosia-ecommerce-source",
+      "icon": "ShoppingBag",
+      "category": "industry",
+      "rating": 4.8,
+      "fee": 49,
+      "status": "active",
+      "sortOrder": 16
+    },
+    {
+      "id": "mod-onex",
+      "name": "EUROSIA ONEX",
+      "description": "All-in-One Platform for Digital Marketing Agencies",
+      "slug": "eurosia-onex",
+      "icon": "Megaphone",
+      "category": "management",
+      "rating": 4.7,
+      "fee": 39,
+      "status": "active",
+      "sortOrder": 17
+    }
+  ],
+  "pages": [
+    {
+      "id": "page-home",
+      "title": "Home",
+      "slug": "home",
+      "status": "active",
+      "seoTitle": "EUROSIA App Ecosystem - The Business Operating System",
+      "seoDescription": "Run ERP, CRM, Accounting, AI, Communication and Cybersecurity from a single premium offline-first ecosystem.",
+      "seoKeywords": "Business software, ERP, CRM, Accounting, Offline-First",
+      "sortOrder": 1
+    },
+    {
+      "id": "page-apps",
+      "title": "Apps",
+      "slug": "apps",
+      "status": "active",
+      "seoTitle": "Eurosia Modular Apps Marketplace",
+      "seoDescription": "Choose and install modular tools for your custom enterprise operations.",
+      "seoKeywords": "pos software, clinic system, billing apps",
+      "sortOrder": 2
+    },
+    {
+      "id": "page-solutions",
+      "title": "Solutions",
+      "slug": "solutions",
+      "status": "active",
+      "seoTitle": "Enterprise Technology Solutions",
+      "seoDescription": "Deeply vertical industry setups powered by advanced cloud layers.",
+      "seoKeywords": "fintech solution, cyber defense",
+      "sortOrder": 3
+    },
+    {
+      "id": "page-marketplace",
+      "title": "Marketplace",
+      "slug": "marketplace",
+      "status": "active",
+      "seoTitle": "EUROSIA Partner Developer App Marketplace",
+      "seoDescription": "Discover external services and plugins that seamlessly click into EUROSIA.",
+      "seoKeywords": "microapps, plugins",
+      "sortOrder": 4
+    },
+    {
+      "id": "page-pricing",
+      "title": "Pricing",
+      "slug": "pricing",
+      "status": "active",
+      "seoTitle": "Affordable Enterprise Packages & Licensing",
+      "seoDescription": "Pay-as-you-grow plans for teams of all sizes with local offline deployment support.",
+      "seoKeywords": "saas price, business billing, currency",
+      "sortOrder": 5
+    },
+    {
+      "id": "page-about",
+      "title": "About",
+      "slug": "about",
+      "status": "active",
+      "seoTitle": "Our Foundational Mission",
+      "seoDescription": "Architecting the infrastructure that empowers contemporary enterprise worldwide.",
+      "seoKeywords": "eurosia team, tech vision",
+      "sortOrder": 6
+    },
+    {
+      "id": "page-contact",
+      "title": "Contact",
+      "slug": "contact",
+      "status": "active",
+      "seoTitle": "Get in Touch with Systems Experts",
+      "seoDescription": "Discuss your company deployment and multi-tenant requirements with us.",
+      "seoKeywords": "customer support, sales inquiry",
+      "sortOrder": 7
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec-hero",
+      "pageId": "page-home",
+      "type": "hero",
+      "title": "Your Complete Business Operating System",
+      "subtitle": "One Platform. One Login. Unlimited Business Solutions.",
+      "content": {
+        "description": "EUROSIA App Ecosystem brings ERP, CRM, Accounting, AI, Communication, Fintech, Cybersecurity, eCommerce and Industry Solutions into one powerful platform.",
+        "ctaText": "Start Free Trial",
+        "secondaryCtaText": "Explore Apps",
+        "trustedStat": "5,000+ Businesses",
+        "countriesStat": "15+ Countries",
+        "uptimeStat": "99.9% Uptime Guaranteed"
+      },
+      "status": "active",
+      "sortOrder": 1
+    },
+    {
+      "id": "sec-layers",
+      "pageId": "page-home",
+      "type": "layers",
+      "title": "Built on a Strong Foundation",
+      "subtitle": "POWERFUL TECHNOLOGY LAYERS",
+      "content": {
+        "layers": [
+          {
+            "name": "Business Management Layer",
+            "desc": "ERP, CRM, Inventory, Procurement, HR, Payroll & Projects",
+            "icon": "Building2"
+          },
+          {
+            "name": "Artificial Intelligence Layer",
+            "desc": "AI Chatbots, Voice Agents, Automation, Predictive Analytics",
+            "icon": "Bot"
+          },
+          {
+            "name": "Communication Layer",
+            "desc": "Cloud PBX, IVR, Omnichannel, Call Center, WhatsApp",
+            "icon": "PhoneCall"
+          },
+          {
+            "name": "Fintech Layer",
+            "desc": "Accounting, Billing, Payment Reminders, Cash Flow Management",
+            "icon": "DollarSign"
+          },
+          {
+            "name": "Cybersecurity Layer",
+            "desc": "Threat Monitoring, Vulnerability Assessment, Security Operations",
+            "icon": "Shield"
+          },
+          {
+            "name": "Industry Solutions Layer",
+            "desc": "Healthcare, Retail, Construction, Agriculture & Many More",
+            "icon": "Globe"
+          }
+        ]
+      },
+      "status": "active",
+      "sortOrder": 2
+    },
+    {
+      "id": "sec-steps",
+      "pageId": "page-home",
+      "type": "steps",
+      "title": "Simple Steps to Complete Business Management",
+      "subtitle": "HOW EUROSIA APP ECOSYSTEM WORKS",
+      "content": {
+        "steps": [
+          {
+            "number": "01",
+            "name": "Visit Website",
+            "action": "Explore Suite",
+            "detail": "Browse the ecosystem and check modular apps"
+          },
+          {
+            "number": "02",
+            "name": "Create Account",
+            "action": "Register",
+            "detail": "Create system operator credentials"
+          },
+          {
+            "number": "03",
+            "name": "Create Company",
+            "action": "Tenant Setup",
+            "detail": "Configure your distinct business environment"
+          },
+          {
+            "number": "04",
+            "name": "Choose Apps",
+            "action": "Select Suite",
+            "detail": "Install retail, clinic, healthcare or comms"
+          },
+          {
+            "number": "05",
+            "name": "Activate License",
+            "action": "Secure Link",
+            "detail": "Validate license codes on local work terminals"
+          },
+          {
+            "number": "06",
+            "name": "Use Dashboard",
+            "action": "Manage Live",
+            "detail": "Track sales logs, audit metrics and voice lines"
+          },
+          {
+            "number": "07",
+            "name": "Work Offline",
+            "action": "Local Safe",
+            "detail": "Capture POS register transactions without active internet"
+          },
+          {
+            "number": "08",
+            "name": "Auto Sync Cloud",
+            "action": "Merge Data",
+            "detail": "Seamlessly push transactions to web nodes once online"
+          },
+          {
+            "number": "09",
+            "name": "Scale & Grow",
+            "action": "Add Nodes",
+            "detail": "Deploy more terminals, operators and custom branches"
+          }
+        ]
+      },
+      "status": "active",
+      "sortOrder": 3
+    }
+  ],
+  "pricingPlans": [
+    {
+      "id": "p-starter",
+      "name": "Starter",
+      "priceMonthly": 1990,
+      "priceYearly": 19100,
+      "period": "monthly",
+      "description": "Perfect for small businesses",
+      "features": [
+        "Up to 5 Users",
+        "5 Apps Included",
+        "5GB Cloud Storage",
+        "Email Support",
+        "Offline-capable working core"
+      ],
+      "badge": "Best for Solo",
+      "status": "active",
+      "sortOrder": 1
+    },
+    {
+      "id": "p-business",
+      "name": "Business",
+      "priceMonthly": 4990,
+      "priceYearly": 47900,
+      "period": "monthly",
+      "description": "For growing businesses",
+      "features": [
+        "Up to 20 Users",
+        "20 Apps Included",
+        "20GB Cloud Storage",
+        "Priority Support",
+        "Database sync & conflict control",
+        "Advanced RBAC Matrix"
+      ],
+      "badge": "Popular Selection",
+      "status": "active",
+      "sortOrder": 2
+    },
+    {
+      "id": "p-enterprise",
+      "name": "Enterprise",
+      "priceMonthly": 12990,
+      "priceYearly": 124700,
+      "period": "monthly",
+      "description": "For large organizations",
+      "features": [
+        "Unlimited Users",
+        "Unlimited Apps",
+        "100GB Cloud Storage",
+        "24/7 Premium Support",
+        "Dedicated Server Deployment",
+        "Biometric device token mapping"
+      ],
+      "badge": "Full Scale System",
+      "status": "active",
+      "sortOrder": 3
+    },
+    {
+      "id": "p-whitelabel",
+      "name": "White Label",
+      "priceMonthly": 0,
+      "priceYearly": 0,
+      "period": "custom",
+      "description": "For resellers & agencies",
+      "features": [
+        "White Label Branding",
+        "Custom Domain",
+        "Dedicated Support",
+        "Revenue Sharing",
+        "Whitelabeled binary builder"
+      ],
+      "badge": "Corporate Partner",
+      "status": "active",
+      "sortOrder": 4
+    }
+  ],
+  "paymentMethods": [
+    {
+      "id": "pay-stripe",
+      "name": "Stripe",
+      "provider": "stripe",
+      "isActive": true,
+      "logo": "CreditCard",
+      "mode": "sandbox",
+      "apiKey": "sk_test_mock...",
+      "currency": "USD",
+      "rate": 2.9,
+      "instruction": "Process international visa and mastercards instantly.",
+      "sortOrder": 1
+    },
+    {
+      "id": "pay-bkash",
+      "name": "bKash",
+      "provider": "bkash",
+      "isActive": true,
+      "logo": "Smartphone",
+      "mode": "sandbox",
+      "merchantId": "BKASH_MOCK_MERCH_012",
+      "currency": "BDT",
+      "rate": 1.85,
+      "instruction": "Easy mobile wallet payments directly in Bangladesh.",
+      "sortOrder": 2
+    },
+    {
+      "id": "pay-nagad",
+      "name": "Nagad",
+      "provider": "nagad",
+      "isActive": true,
+      "logo": "Smartphone",
+      "mode": "sandbox",
+      "merchantId": "NAG_MOCK_7719",
+      "currency": "BDT",
+      "rate": 1.5,
+      "instruction": "Dynamic Government mobile financing wallet system.",
+      "sortOrder": 3
+    },
+    {
+      "id": "pay-manual",
+      "name": "Bank Transfer",
+      "provider": "bank",
+      "isActive": true,
+      "logo": "Building",
+      "mode": "live",
+      "instruction": "Transfer directly to Eurosia Tech Ltd, Account: 0041-01129-9917-882. Central Bank Routing.",
+      "currency": "BDT",
+      "rate": 0,
+      "sortOrder": 4
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-1",
+      "transactionId": "TXN_77419A9B",
+      "companyId": "c-1",
+      "userId": "u-3",
+      "packageId": "p-business",
+      "amount": 4990,
+      "status": "success",
+      "paymentMethodId": "pay-bkash",
+      "createdAt": "2026-06-14T13:55:53.996Z"
+    },
+    {
+      "id": "tx-2",
+      "transactionId": "TXN_88129B2C",
+      "companyId": "c-1",
+      "userId": "u-3",
+      "packageId": "p-business",
+      "amount": 4990,
+      "status": "success",
+      "paymentMethodId": "pay-stripe",
+      "createdAt": "2026-06-15T03:15:53.996Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1",
+      "userId": "u-1",
+      "userName": "Super Owner Admin",
+      "companyId": "c-owner",
+      "action": "SU_LOGIN",
+      "details": "Logged into root control node",
+      "ip": "127.0.0.1",
+      "deviceFingerprint": "FINGERPRINT_OWNER_TERMINAL",
+      "createdAt": "2026-06-15T03:14:13.996Z"
+    },
+    {
+      "id": "log-2",
+      "userId": "u-3",
+      "userName": "John Doe",
+      "companyId": "c-1",
+      "action": "LICENSE_PULL",
+      "details": "Acme Corp requested and merged license configuration EUR-ACME-8F2B-9871-X99",
+      "ip": "203.21.14.77",
+      "deviceFingerprint": "FINGERPRINT_WEB_PREVIEW_USER",
+      "createdAt": "2026-06-15T03:15:03.996Z"
+    }
+  ],
+  "syncLogs": [
+    {
+      "id": "sync-1",
+      "companyId": "c-1",
+      "userId": "u-3",
+      "deviceFingerprint": "FINGERPRINT_WEB_PREVIEW_USER",
+      "action": "push",
+      "status": "success",
+      "recordsSyncedCount": 42,
+      "details": "Pushed 42 local POS sales entries from offline SQLite block",
+      "createdAt": "2026-06-15T03:13:53.996Z"
+    },
+    {
+      "id": "sync-2",
+      "companyId": "c-1",
+      "userId": "u-3",
+      "deviceFingerprint": "FINGERPRINT_WEB_PREVIEW_USER",
+      "action": "pull",
+      "status": "success",
+      "recordsSyncedCount": 4,
+      "details": "Downloaded core company security layers updates",
+      "createdAt": "2026-06-15T03:15:53.996Z"
+    }
+  ],
+  "featureFlags": [
+    {
+      "id": "flag-1",
+      "name": "AI Autoresolver",
+      "key": "ai_resolve",
+      "description": "Use Gemini to automatically resolve sync conflict logs",
+      "isEnabled": true,
+      "createdAt": "2026-06-15T03:15:53.996Z"
+    },
+    {
+      "id": "flag-2",
+      "name": "White Label Module",
+      "key": "white_label",
+      "description": "Expose customizable theme configurations on customer portals",
+      "isEnabled": false,
+      "createdAt": "2026-06-15T03:15:53.996Z"
+    }
+  ],
+  "plugins": [
+    {
+      "id": "plug-pbx",
+      "name": "CloudPBX Integrator",
+      "key": "pbx_service",
+      "description": "Connect Asterisk/FreePBX instances to operational dashboard",
+      "isEnabled": true,
+      "version": "2.1.0",
+      "author": "Eurosia Labs"
+    },
+    {
+      "id": "plug-cyber",
+      "name": "Eurosia CyberSentinel",
+      "key": "cyber_sentinel",
+      "description": "Continuous network endpoint monitoring pipeline",
+      "isEnabled": true,
+      "version": "1.0.4",
+      "author": "Eurosia Security"
+    }
+  ],
+  "solutions": [
+    {
+      "id": "sol-pos",
+      "name": "EUROSIA POS",
+      "slug": "eurosia-pos",
+      "category": "Retail & Commerce",
+      "description": "Complete POS ecosystem for restaurants, cafes, food courts, retail stores and multi-branch operations. Includes billing, inventory, kitchen display, CRM, loyalty programs, analytics and offline-first operation.",
+      "url": "https://eurosia.io/",
+      "openInNewTab": true,
+      "status": "active",
+      "sortOrder": 1,
+      "icon": "ShoppingBag"
+    },
+    {
+      "id": "sol-erp",
+      "name": "Eurosia ERP Solution",
+      "slug": "erp-solution",
+      "category": "Enterprise ERP",
+      "description": "Enterprise resource planning encompassing HR, payroll, procurement, asset manager, and advanced double-entry general ledgers.",
+      "url": "https://eurosia.io/",
+      "openInNewTab": true,
+      "status": "active",
+      "sortOrder": 2,
+      "icon": "Building2"
+    },
+    {
+      "id": "sol-care",
+      "name": "EUROSIA Care",
+      "slug": "eurosia-care",
+      "category": "Healthcare",
+      "description": "Digital Clinic & Healthcare Platform including appointment scheduling, patient records, and automated billing workflows.",
+      "url": "https://care.eurosia.app",
+      "openInNewTab": true,
+      "status": "active",
+      "sortOrder": 3,
+      "icon": "Activity"
+    }
+  ],
+  "themeSettings": {
+    "primaryColor": "#FF3D4F",
+    "secondaryColor": "#11135E",
+    "backgroundColor": "#02020A",
+    "logoUrl": "/assets/eurosia_logo.png"
+  }
+}

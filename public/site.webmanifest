@@ -1,0 +1,25 @@
+{
+  "name": "EUROSIA App Ecosystem",
+  "short_name": "Eurosia",
+  "description": "Unified business operating ecosystem bringing ERP, CRM, AI, POS, and communications in one space.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#02020A",
+  "theme_color": "#02020A",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "finance"],
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

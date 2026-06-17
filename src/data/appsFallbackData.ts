@@ -1,0 +1,228 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { AppType } from '../types/app';
+
+export const fallbackApps: AppType[] = [
+  { 
+    id: "mod-pos", 
+    name: "EUROSIA POS", 
+    description: "Smart Restaurant & Retail Management", 
+    slug: "eurosia-pos", 
+    icon: "DollarSign", 
+    category: "retail", 
+    rating: 4.8, 
+    fee: 39, 
+    status: "active", 
+    sortOrder: 1,
+    externalUrl: "https://eurosia.io/",
+    openInNewTab: true,
+    isExternal: true
+  },
+  { 
+    id: "mod-care", 
+    name: "EUROSIA Care", 
+    description: "Digital Clinic & Healthcare Platform", 
+    slug: "eurosia-care", 
+    icon: "Activity", 
+    category: "healthcare", 
+    rating: 4.7, 
+    fee: 49, 
+    status: "active", 
+    sortOrder: 2,
+    externalUrl: "https://care.eurosia.app",
+    openInNewTab: true,
+    isExternal: true
+  },
+  { 
+    id: "mod-pbx", 
+    name: "EUROSIA CloudPBX", 
+    description: "Cloud PBX & Call Center Solution", 
+    slug: "eurosia-cloudpbx", 
+    icon: "PhoneCall", 
+    category: "communication", 
+    rating: 4.9, 
+    fee: 29, 
+    status: "active", 
+    sortOrder: 3,
+    externalUrl: "https://cloudpbx.eurosia.app",
+    openInNewTab: true,
+    isExternal: true
+  },
+  { 
+    id: "mod-ai-calling", 
+    name: "EUROSIA AI Calling", 
+    description: "AI-Powered Voice Automation Platform", 
+    slug: "eurosia-ai-calling", 
+    icon: "Mic", 
+    category: "ai", 
+    rating: 4.9, 
+    fee: 79, 
+    status: "active", 
+    sortOrder: 4,
+    externalUrl: "https://aicalling.eurosia.app",
+    openInNewTab: true,
+    isExternal: true
+  },
+  { 
+    id: "mod-kabyo", 
+    name: "Kabyo Kotha AI", 
+    description: "Bengali Conversational AI Platform", 
+    slug: "kabyo-kotha-ai", 
+    icon: "MessageSquareText", 
+    category: "ai", 
+    rating: 4.6, 
+    fee: 19, 
+    status: "active", 
+    sortOrder: 5 
+  },
+  { 
+    id: "mod-chatbot", 
+    name: "EUROSIA AI Chatbot", 
+    description: "Customer Engagement Platform", 
+    slug: "eurosia-ai-chatbot", 
+    icon: "Bot", 
+    category: "ai", 
+    rating: 4.8, 
+    fee: 25, 
+    status: "active", 
+    sortOrder: 6 
+  },
+  { 
+    id: "mod-datapilot", 
+    name: "EUROSIA DataPilot AI", 
+    description: "Data Automation & Web Intelligence", 
+    slug: "eurosia-datapilot-ai", 
+    icon: "Database", 
+    category: "ai", 
+    rating: 4.7, 
+    fee: 89, 
+    status: "active", 
+    sortOrder: 7 
+  },
+  { 
+    id: "mod-defender", 
+    name: "EUROSIA Defender X", 
+    description: "Global Cyber Defense Platform", 
+    slug: "eurosia-defender-x", 
+    icon: "ShieldAlert", 
+    category: "cybersecurity", 
+    rating: 4.9, 
+    fee: 99, 
+    status: "active", 
+    sortOrder: 8,
+    externalUrl: "https://defenderx.eurosia.app",
+    openInNewTab: true,
+    isExternal: true
+  },
+  { 
+    id: "mod-buildnex", 
+    name: "EUROSIA BuildNex", 
+    description: "Construction ERP & Property Management", 
+    slug: "eurosia-buildnex", 
+    icon: "Building2", 
+    category: "industry", 
+    rating: 4.5, 
+    fee: 119, 
+    status: "active", 
+    sortOrder: 9 
+  },
+  { 
+    id: "mod-cashbook", 
+    name: "EUROSIA CashBook", 
+    description: "Smart Business Accounting Software", 
+    slug: "eurosia-cashbook", 
+    icon: "BookOpen", 
+    category: "industry", 
+    rating: 4.8, 
+    fee: 15, 
+    status: "active", 
+    sortOrder: 10 
+  },
+  { 
+    id: "mod-invoicenex", 
+    name: "EUROSIA InvoiceNex", 
+    description: "Professional Invoice Generator", 
+    slug: "eurosia-invoicenex", 
+    icon: "Receipt", 
+    category: "industry", 
+    rating: 4.9, 
+    fee: 9, 
+    status: "active", 
+    sortOrder: 11 
+  },
+  { 
+    id: "mod-paybill", 
+    name: "EUROSIA PayBill", 
+    description: "Bill Management & Payment Reminder", 
+    slug: "eurosia-paybill", 
+    icon: "Hourglass", 
+    category: "industry", 
+    rating: 4.7, 
+    fee: 12, 
+    status: "active", 
+    sortOrder: 12 
+  },
+  { 
+    id: "mod-nexfarmer", 
+    name: "NexFarmer", 
+    description: "Agro Invoice & Farm Business Solution", 
+    slug: "nexfarmer", 
+    icon: "Wheat", 
+    category: "industry", 
+    rating: 4.8, 
+    fee: 29, 
+    status: "active", 
+    sortOrder: 13 
+  },
+  { 
+    id: "mod-cloud", 
+    name: "EUROSIA Cloud", 
+    description: "Multi-Tenant SaaS Platform", 
+    slug: "eurosia-cloud", 
+    icon: "Cloud", 
+    category: "retail", 
+    rating: 4.9, 
+    fee: 59, 
+    status: "active", 
+    sortOrder: 14 
+  },
+  { 
+    id: "mod-fieldforce", 
+    name: "Field Force Tracker", 
+    description: "GPS & Workforce Management", 
+    slug: "field-force-tracker", 
+    icon: "MapPin", 
+    category: "industry", 
+    rating: 4.6, 
+    fee: 24, 
+    status: "active", 
+    sortOrder: 15 
+  },
+  { 
+    id: "mod-ecommerce", 
+    name: "EUROSIA eCommerce Source", 
+    description: "Multi-Vendor eCommerce Platform", 
+    slug: "eurosia-ecommerce-source", 
+    icon: "ShoppingBag", 
+    category: "retail", 
+    rating: 4.8, 
+    fee: 49, 
+    status: "active", 
+    sortOrder: 16 
+  },
+  { 
+    id: "mod-onex", 
+    name: "EUROSIA ONEX", 
+    description: "All-in-One Platform for Digital Marketing Agencies", 
+    slug: "eurosia-onex", 
+    icon: "Megaphone", 
+    category: "retail", 
+    rating: 4.7, 
+    fee: 39, 
+    status: "active", 
+    sortOrder: 17 
+  }
+];

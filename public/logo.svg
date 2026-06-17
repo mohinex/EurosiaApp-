@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">
+  <!-- Solid Premium Black Background -->
+  <rect width="100" height="100" fill="#000000" rx="20" />
+  
+  <!-- Red top bar of E -->
+  <rect x="41" y="32" width="18" height="6.6" fill="#FF3D4F" />
+
+  <!-- White body of E (rounded left shoulder, precise 90-degree right details) -->
+  <path
+    d="
+      M 41,60.2 
+      H 59 
+      V 54.4 
+      H 49.3 
+      V 51 
+      H 56.5 
+      V 47.5 
+      H 49.3 
+      V 41.2 
+      C 41,41.2 41,41.2 41,47.5 
+      L 41,60.2 Z
+    "
+    fill="#FFFFFF"
+  />
+</svg>

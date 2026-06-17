@@ -1,0 +1,8 @@
+{
+  "name": "EurosiaApp website",
+  "description": "The Ecosystem-Powered Business Operating System for the Modern World",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

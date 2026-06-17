@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EUROSIA App Ecosystem | Business Operating System</title>
+    <meta name="description" content="Build, manage and scale your entire business from one platform. EUROSIA App Ecosystem brings ERP, CRM, Accounting, AI, and industry solutions in one space." />
+    
+    <!-- Branding Icons & Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- PWA site manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ff0000" />
+
+    <!-- iOS / Safari App Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EUROSIA" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.eurosia.app" />
+
+    <!-- Open Graph (Facebook / LinkedIn) SEO Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="EUROSIA App Ecosystem | The Enterprise Core" />
+    <meta property="og:description" content="Securely build, manage, and scale your entire business operation from one unified workspace. Powered by Eurosia App Ecosystem." />
+    <meta property="og:url" content="https://www.eurosia.app" />
+    <meta property="og:image" content="https://www.eurosia.app/logo.svg" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:site_name" content="EUROSIA" />
+
+    <!-- Twitter Card SEO Preview -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@EurosiaOfficial" />
+    <meta name="twitter:creator" content="@EurosiaOfficial" />
+    <meta name="twitter:title" content="EUROSIA App Ecosystem" />
+    <meta name="twitter:description" content="The Unified Business Operating Ecosystem built with robust security and offline-first technology." />
+    <meta name="twitter:image" content="https://www.eurosia.app/logo.svg" />
+
+    <!-- Organization Schema with sameAs Social Profiles -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EUROSIA App Ecosystem",
+        "url": "https://www.eurosia.app",
+        "logo": "https://www.eurosia.app/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/EurosiaOfficial",
+          "https://x.com/EurosiaOfficial",
+          "https://linkedin.com/in/EurosiaOfficial",
+          "https://www.instagram.com/EurosiaOfficial"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => console.log('[Eurosia PWA] Service Worker registered:', reg.scope))
+            .catch(err => console.error('[Eurosia PWA] Service Worker registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
+
